@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Alice&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply bg-color-1 text-color-5 font-alice text-base;
+  }
+
+  #root {
+    @apply w-screen h-screen relative;
+  }
+
+  .input {
+    @apply border-color-2 border-b-4 outline-none w-full bg-transparent py-1 my-4 placeholder:text-color-5 placeholder:opacity-50 autofill:bg-transparent;
+  }
+
+  .input:-webkit-autofill {
+    background-color: transparent !important;
+    box-shadow: 0 0 0px 1000px transparent inset !important;
+    -webkit-text-fill-color: #aea7a3 !important;
+    color: #aea7a3 !important;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  .input:-webkit-autofill,
+  .input:focus {
+    color: #aea7a3 !important;
+  }
+}
